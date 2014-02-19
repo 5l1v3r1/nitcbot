@@ -1,0 +1,10 @@
+# This file collects strings that should be filtered out
+# so that @nitcbot all RTs relevant tweets 
+# Please feel free to add filter strings
+# One filter per line
+
+"jobs at NIT"
+"Faculty Walk Ins"
+"Walk in for"
+"Lecturers Jobs"
+"Staff Recruitment"
