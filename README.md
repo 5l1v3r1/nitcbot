@@ -2,7 +2,8 @@ nitcbot
 =======
 
 the code that powers [@nitcbot](twitter.com/nitcbot)
-[@nitcbot](twitter.com/nitcbot) Retweets all chatter about [NIT Calicut](http://nitc.ac.in) on Twitter.
+
+nitcbot Retweets all chatter about [NIT Calicut](http://nitc.ac.in) on Twitter.
 
 
 
