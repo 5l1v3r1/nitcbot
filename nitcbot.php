@@ -47,7 +47,7 @@ $tmhOAuth = new tmhOAuth(array(
 
 // request the user information
 $code = $tmhOAuth->user_request(array(
-			'url' => $tmhOAuth->url('1.1/account/verify_credentials')
+            'url' => $tmhOAuth->url('1.1/account/verify_credentials')
           )
         );
 
@@ -125,13 +125,13 @@ $urlquery = urlencode($query);
 *  Request
 ********************************************************************/
 $code = $tmhOAuth->user_request(array(
-			'url' => $tmhOAuth->url('1.1/search/tweets'),
-			'params' => array(
-          		'include_entities' => true,
-    			'count' => $count,
+            'url' => $tmhOAuth->url('1.1/search/tweets'),
+            'params' => array(
+                'include_entities' => true,
+                'count' => $count,
                 'result_type' => $result_type,
                 'q' => $urlquery,
-        	)
+            )
         ));
 
 // Anything except code 200 is a failure to get the information
@@ -169,7 +169,13 @@ header("Content-type: text/xml; charset=utf-8");
         <link>http://www.twitter.com/<?php echo $twitterName; ?></link>
         <url>http://www.twitter.com/search/?q=<?php echo $query; ?></url>
         </image>
-        <?php foreach ($searchResultsObj['statuses'] as $currentitem) : ?>
+        <?php
+        foreach ($searchResultsObj['statuses'] as $currentitem) : 
+            // avoid recursive hell. I don't RT myself.
+            if ($currentitem['retweeted_status']['user']['screen_name'] == "nitcbot") {
+                    continue;
+            }
+        ?>
             <item>
                  <?php
                  $parsedTweet = tmhUtilities::entify_with_options(
