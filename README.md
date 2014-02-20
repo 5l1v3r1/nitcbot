@@ -1,6 +1,6 @@
+[![Build Status](https://travis-ci.org/arjun024/nitcbot.png)](https://travis-ci.org/arjun024/nitcbot)
 nitcbot
 =======
-
 the code that powers [@nitcbot](twitter.com/nitcbot)
 
 nitcbot Retweets all chatter about [NIT Calicut](http://nitc.ac.in) on Twitter.
