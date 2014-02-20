@@ -1,10 +1,16 @@
-# This file collects strings that should be filtered out
+# This file collects text and users 
+# that should be filtered out
 # so that @nitcbot RTs relevant tweets only.
-# Please feel free to add filter strings
-# One filter per line
+# Please feel free to add filter strings.
+# One filter per line.
 
+#spam texts
 "jobs at NIT"
 "Faculty Walk Ins"
 "Walk in for"
 "Lecturers Jobs"
 "Staff Recruitment"
+"liked a @YouTube video"
+
+
+#spam users
