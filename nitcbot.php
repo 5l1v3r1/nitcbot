@@ -167,7 +167,7 @@ header("Content-type: text/xml; charset=utf-8");
         <image>
         <title><?php echo $feedTitle; ?></title>
         <link>http://www.twitter.com/<?php echo $twitterName; ?></link>
-        <url>http://www.twitter.com/search/?q=<?php echo $query; ?></url>
+        <url>http://www.twitter.com/search/?q=<?php echo $urlquery; ?></url>
         </image>
         <?php
         foreach ($searchResultsObj['statuses'] as $currentitem) : 
