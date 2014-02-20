@@ -175,30 +175,25 @@ header("Content-type: text/xml; charset=utf-8");
             if ($currentitem['retweeted_status']['user']['screen_name'] == "nitcbot") {
                     continue;
             }
-        ?>
-            <item>
-                 <?php
-                 $parsedTweet = tmhUtilities::entify_with_options(
-                        objectToArray($currentitem),
-                        array(
-                            'target' => 'blank',
-                        )
-                 );
+            $parsedTweet = tmhUtilities::entify_with_options(
+                    objectToArray($currentitem),
+                    array(
+                        'target' => 'blank',
+                    )
+            );
 
-                if (isset($currentitem['retweeted_status'])) :
-                    $avatar = $currentitem['retweeted_status']['user']['profile_image_url'];
-                    $rt = '&nbsp;&nbsp;&nbsp;&nbsp;[<em style="font-size:smaller;">Retweeted by ' . $currentitem['user']['screen_name'] . ' <a href=\'http://twitter.com/' . $currentitem['user']['screen_name'] . '\'>@' . $currentitem['user']['screen_name'] . '</a></em>]';
-                    $tweeter =  $currentitem['retweeted_status']['user']['screen_name'];
-                    $fullname = $currentitem['retweeted_status']['user']['name'];
-                    $tweetTitle = $currentitem['retweeted_status']['text'];
-                else :
-                    $avatar = $currentitem['user']['profile_image_url'];
-                    $rt = '';
-                    $tweeter = $currentitem['user']['screen_name'];
-                    $fullname = $currentitem['user']['name'];
-                    $tweetTitle = $currentitem['text'];
-               endif;
-                ?>
+            if (isset($currentitem['retweeted_status'])) :
+                //kill this flow. only original tweets required.
+                continue;
+            else :
+                echo "<item>";
+                $avatar = $currentitem['user']['profile_image_url'];
+                $rt = '';
+                $tweeter = $currentitem['user']['screen_name'];
+                $fullname = $currentitem['user']['name'];
+                $tweetTitle = $currentitem['text'];
+            endif;
+        ?>
                 <title>
                     <![CDATA[ <?php echo "[@".$tweeter."]\r\n".$tweetTitle; ?> ]]>
                 </title>
