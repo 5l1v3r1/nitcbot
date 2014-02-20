@@ -12,7 +12,7 @@
 /*
 * Modified by Arjun Sreedharan (@arjun024) to suit @nitcbot.
 */
-$TLD_DEBUG = 0;
+$TLD_DE //testing
 if ($TLD_DEBUG == 1){
     ini_set('display_errors', 'On');
     error_reporting(E_ALL | E_STRICT);
