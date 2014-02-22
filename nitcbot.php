@@ -32,7 +32,7 @@ require 'tldlib/keys/tweetledee_keys.php';
 require 'tldlib/tldUtilities.php';
 
 
-$query = 'nitc OR "nit calicut" OR #NITCalicut OR "National Institute of Technology Calicut" OR tathva OR "ragam nit" OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -job -position -positions -naukri -interview -vacancies -GRE -sarkari -nangor -nitcbot -http://u.nu/3nitc -RestlessMystic';
+$query = 'nitc OR "nit calicut" OR #NITCalicut OR "National Institute of Technology Calicut" OR tathva OR "ragam nit" OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -job -position -positions -naukri -interview -vacancies -GRE -sarkari -nangor -nitcbot -"curry club" -Manchester -"Throwback Thursday" -http://u.nu/3nitc -RestlessMystic';
 
 /*******************************************************************
 *  OAuth
