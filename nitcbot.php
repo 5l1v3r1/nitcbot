@@ -33,11 +33,11 @@ require 'tldlib/tldUtilities.php';
 
 
 $query = '"nit calicut" OR "nitcalicut" OR #NITCalicut OR "National Institute of Technology Calicut" OR "tathva nit" OR "ragam nit"'
-.' OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -job -position -positions -interview -vacancies'
-.' -GRE -nangor -nitcbot -"curry club" -Manchester -"Throwback Thursday" -NITCConfessions'
-.' -Detroit -Windsor -#jobsforDetroiters -Detroiters -DetroitChamber'
+.' OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -position -interview -vacancies'
+.' -GRE -nitcbot -"curry club" -Manchester -"Throwback Thursday" -NITCConfessions'
+.' -Detroit -Windsor -#jobsforDetroiters'
 .' -"Ad-hoc" -Sarkari -Naukri -"Faculty Posts" -"Spot Admission"'
-.' -RestlessMystic -NITCEvents -SarkariBankJobs';
+.' -RestlessMystic -SarkariBankJobs';
 
 /*******************************************************************
 *  OAuth
