@@ -32,7 +32,12 @@ require 'tldlib/keys/tweetledee_keys.php';
 require 'tldlib/tldUtilities.php';
 
 
-$query = 'nitc OR "nit calicut" OR #NITCalicut OR "National Institute of Technology Calicut" OR tathva OR "ragam nit" OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -job -position -positions -naukri -interview -vacancies -GRE -sarkari -nangor -nitcbot -"curry club" -Manchester -"Throwback Thursday" -http://u.nu/3nitc -RestlessMystic';
+$query = '"nit calicut" OR "nitcalicut" OR #NITCalicut OR "National Institute of Technology Calicut" OR "tathva nit" OR "ragam nit"'
+.' OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -job -position -positions -interview -vacancies'
+.' -GRE -nangor -nitcbot -"curry club" -Manchester -"Throwback Thursday" -NITCConfessions'
+.' -Detroit -Windsor -#jobsforDetroiters -Detroiters -DetroitChamber'
+.' -"Ad-hoc" -Sarkari -Naukri -"Faculty Posts" -"Spot Admission"'
+.' -RestlessMystic -NITCEvents -SarkariBankJobs';
 
 /*******************************************************************
 *  OAuth
@@ -130,6 +135,7 @@ $code = $tmhOAuth->user_request(array(
                 'include_entities' => true,
                 'count' => $count,
                 'result_type' => $result_type,
+                'lang' => "en",
                 'q' => $urlquery,
             )
         ));
@@ -183,9 +189,10 @@ header("Content-type: text/xml; charset=utf-8");
             );
 
             if (isset($currentitem['retweeted_status'])) :
-                //kill this flow. only original tweets required.
+                //echo "<designation>retweet</designation>";
                 continue;
             else :
+                //echo "<designation>tweet</designation>";
                 echo "<item>";
                 $avatar = $currentitem['user']['profile_image_url'];
                 $rt = '';
@@ -193,7 +200,7 @@ header("Content-type: text/xml; charset=utf-8");
                 $fullname = $currentitem['user']['name'];
                 $tweetTitle = $currentitem['text'];
             endif;
-        ?>
+                ?>
                 <title>
                     <![CDATA[ <?php echo "[@".$tweeter."]\r\n".$tweetTitle; ?> ]]>
                 </title>

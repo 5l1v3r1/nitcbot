@@ -11,8 +11,14 @@
 "Lecturers Jobs"
 "Staff Recruitment"
 "liked a @YouTube video"
+"Ad-hoc"
+"Sarkari"
+"Naukri"
+"Faculty Posts"
+"NIT Calicut Recruitment"
 
 
 #spam users
 RestlessMystic
 NITCEvents
+SarkariBankJobs
