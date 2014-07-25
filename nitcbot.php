@@ -31,10 +31,10 @@ require 'tldlib/keys/tweetledee_keys.php';
 // include Geoff Smith's utility functions
 require 'tldlib/tldUtilities.php';
 
-
+//do not add more filters - already maxed out query length
 $query = '"nit calicut" OR "nitcalicut" OR #NITCalicut OR "National Institute of Technology Calicut" OR "tathva nit" OR "ragam nit"'
 .' OR @NITCalicut OR @NITcalicut OR #tedxnitcalicut -Iran -vacancy -jobs -position -interview -vacancies'
-.' -GRE -nitcbot -"curry club" -Manchester -"Throwback Thursday" -NITCConfessions'
+.' -GRE -nitcbot -"curry club" -Manchester -"NIT Calicut Recruitment" -NITCConfessions'
 .' -Detroit -Windsor -#jobsforDetroiters'
 .' -"Ad-hoc" -Sarkari -Naukri -"Faculty Posts" -"Spot Admission"'
 .' -RestlessMystic -SarkariBankJobs';
