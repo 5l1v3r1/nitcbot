@@ -1,9 +1,9 @@
 [![Build Status](https://travis-ci.org/arjun024/nitcbot.png)](https://travis-ci.org/arjun024/nitcbot)
 nitcbot
 =======
-the code that powers [@nitcbot](twitter.com/nitcbot)
+the code that powers [@nitcbot](http://twitter.com/nitcbot)
 
-nitcbot Retweets all chatter about [NIT Calicut](http://nitc.ac.in) on Twitter.
+nitcbot Retweets all the chatter about [NIT Calicut](http://nitc.ac.in) on Twitter.
 
 
 
@@ -19,4 +19,4 @@ Until Twitter API V1 was deprecated, there was no authentication used. Old code 
 
 ###Comments
 * Require a spam filter to get rid of useless tweets.
-* All Contributions / Pull Requests are welcome.
+* All contributions are welcome.
