@@ -202,7 +202,7 @@ header("Content-type: text/xml; charset=utf-8");
             endif;
                 ?>
                 <title>
-                    <![CDATA[ <?php echo "[@".$tweeter."]\r\n".$tweetTitle; ?> ]]>
+                    <![CDATA[ <?php echo "»@".$tweeter."\r\n".$tweetTitle; ?> ]]>
                 </title>
                 <link>https://twitter.com/<?php echo $currentitem['user']['screen_name'] ?>/statuses/<?php echo $currentitem['id_str']; ?></link>
                 <guid isPermaLink='false'><?php echo $currentitem['id_str']; ?></guid>
